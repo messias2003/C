@@ -1,0 +1,42 @@
+rograma {
+  funcao inicio() {Algoritmo "CalculoSalario"
+
+Var 
+   salario, aumento, novosalario: Real
+
+Inicio
+   Repita
+      Escreva("Informe o salário atual (ou 0 para sair): ")   
+      Leia(salario)  
+
+      Se (salario > 0) entao  
+         // Lógica dos aumentos
+         Se (salario <= 1200) entao 
+            aumento <- salario * 0.25
+         Senao
+            Se (salario <= 1900) entao
+               aumento <- salario * 0.20  
+            Senao
+               Se (salario <= 2700) entao
+                  aumento <- salario * 0.10
+               Senao
+                  aumento <- 0 // Para salários acima de 2700
+               FimSe
+            FimSe
+         FimSe
+
+         novosalario <- salario + aumento
+
+         // Exibição dentro do laço para mostrar cada cálculo
+         Escreval("Salário original: R$ ", salario)
+         Escreval("Valor do aumento: R$ ", aumento)
+         Escreval("Novo salário: R$ ", novosalario)
+         Escreval("--------------------------------")
+      FimSe
+
+   Ate salario = 0 // Condição para parar o Repita
+
+FimAlgoritmo
+    
+  }
+}
